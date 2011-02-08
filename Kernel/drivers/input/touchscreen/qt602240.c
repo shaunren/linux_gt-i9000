@@ -2852,7 +2852,7 @@ void TSP_forced_release(void)
 
 		input_report_abs(qt602240->input_dev, ABS_MT_POSITION_X, fingerInfo[i].x);
 		input_report_abs(qt602240->input_dev, ABS_MT_POSITION_Y, fingerInfo[i].y);
-		input_report_abs(qt602240->input_dev, ABS_MT_TOUCH_MAJOR, fingerInfo[i].pressure);	// 0ÀÌ¸é Release, ¾Æ´Ï¸é Press »óÅÂ(Down or Move)
+		input_report_abs(qt602240->input_dev, ABS_MT_TOUCH_MAJOR, fingerInfo[i].pressure);	// 0ï¿½Ì¸ï¿½ Release, ï¿½Æ´Ï¸ï¿½ Press ï¿½ï¿½ï¿½ï¿½(Down or Move)
 		input_report_abs(qt602240->input_dev, ABS_MT_WIDTH_MAJOR, fingerInfo[i].size_id);	// (ID<<8) | Size
 		input_mt_sync(qt602240->input_dev);
 
@@ -2880,7 +2880,7 @@ void TSP_forced_release_forOKkey(void)
 
 		input_report_abs(qt602240->input_dev, ABS_MT_POSITION_X, fingerInfo[i].x);
 		input_report_abs(qt602240->input_dev, ABS_MT_POSITION_Y, fingerInfo[i].y);
-		input_report_abs(qt602240->input_dev, ABS_MT_TOUCH_MAJOR, fingerInfo[i].pressure);	// 0ÀÌ¸é Release, ¾Æ´Ï¸é Press »óÅÂ(Down or Move)
+		input_report_abs(qt602240->input_dev, ABS_MT_TOUCH_MAJOR, fingerInfo[i].pressure);	// 0ï¿½Ì¸ï¿½ Release, ï¿½Æ´Ï¸ï¿½ Press ï¿½ï¿½ï¿½ï¿½(Down or Move)
 		input_report_abs(qt602240->input_dev, ABS_MT_WIDTH_MAJOR, fingerInfo[i].size_id);	// (ID<<8) | Size
 		input_mt_sync(qt602240->input_dev);
 
@@ -3005,7 +3005,7 @@ void  get_message(struct work_struct * p)
 						fingerInfo[i].pressure= 0;
 						input_report_abs(qt602240->input_dev, ABS_MT_POSITION_X, fingerInfo[i].x);
 						input_report_abs(qt602240->input_dev, ABS_MT_POSITION_Y, fingerInfo[i].y);
-						input_report_abs(qt602240->input_dev, ABS_MT_TOUCH_MAJOR, fingerInfo[i].pressure);	// 0ÀÌ¸é Release, ¾Æ´Ï¸é Press »óÅÂ(Down or Move)
+						input_report_abs(qt602240->input_dev, ABS_MT_TOUCH_MAJOR, fingerInfo[i].pressure);	// 0ï¿½Ì¸ï¿½ Release, ï¿½Æ´Ï¸ï¿½ Press ï¿½ï¿½ï¿½ï¿½(Down or Move)
 						input_report_abs(qt602240->input_dev, ABS_MT_WIDTH_MAJOR, fingerInfo[i].size_id);	// (ID<<8) | Size
 						input_mt_sync(qt602240->input_dev);
 			
@@ -3223,7 +3223,7 @@ void  get_message(struct work_struct * p)
 	
 				input_report_abs(qt602240->input_dev, ABS_MT_POSITION_X, fingerInfo[i].x);
 				input_report_abs(qt602240->input_dev, ABS_MT_POSITION_Y, fingerInfo[i].y);
-				input_report_abs(qt602240->input_dev, ABS_MT_TOUCH_MAJOR, fingerInfo[i].pressure);	// 0ÀÌ¸é Release, ¾Æ´Ï¸é Press »óÅÂ(Down or Move)
+				input_report_abs(qt602240->input_dev, ABS_MT_TOUCH_MAJOR, fingerInfo[i].pressure);	// 0ï¿½Ì¸ï¿½ Release, ï¿½Æ´Ï¸ï¿½ Press ï¿½ï¿½ï¿½ï¿½(Down or Move)
 				input_report_abs(qt602240->input_dev, ABS_MT_WIDTH_MAJOR, fingerInfo[i].size_id);	// (ID<<8) | Size
 				input_mt_sync(qt602240->input_dev);
 				
