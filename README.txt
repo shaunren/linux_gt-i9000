@@ -1,3 +1,10 @@
+Voodoo++ additions:
+
+Voodoo++ come with a custom defconfig, do
+make aries_eur_voodoo++_defconfig
+
+
+
 Voodoo additions:
 
 Voodoo come with a custom defconfig, you can do:
@@ -28,3 +35,4 @@ HOW TO BUILD KERNEL 2.6.32 FOR GT-I9000
 	drivers/scsi/scsi_wait_scan.ko
 	drivers/samsung/fm_si4709/Si4709_driver.ko
 	drivers/samsung/vibetonz/vibrator.ko
+
