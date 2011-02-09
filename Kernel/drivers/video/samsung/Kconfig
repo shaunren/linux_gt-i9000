@@ -137,6 +137,22 @@ config VOODOO_MDNIE_VIDEOS_ALT_PRESETS
 	---help---
 	  This enables Voodoo color mDNIe useful alternative presets used by Samsung video player
 
+config FB_S3C_USE_CUSTOM_LOGO
+	bool "Use custom logo header"
+	depends on FB_S3C
+	default n
+	---help---
+	  This enables support for custom boot logo headers
+	
+if FB_S3C_USE_CUSTOM_LOGO
+
+config FB_S3C_CUSTOM_LOGO_HEADER
+	string "Custom logo header"
+	depends on FB_S3C
+	default "logo_rgb24_wvga_portrait_custom.h"
+
+endif # FB_S3C_USE_CUSTOM_LOGO
+
 config FB_S3C_LVDS
 	bool "LVDS"
 	depends on FB_S3C && (ARCH_S5PV210)

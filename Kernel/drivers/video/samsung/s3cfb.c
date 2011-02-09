@@ -135,6 +135,9 @@ static int s3cfb_draw_logo(struct fb_info *fb)
 #if defined(CONFIG_MACH_S5PC110_ARIES)
 extern int get_boot_charger_info(void);
 
+#if defined(CONFIG_FB_S3C_USE_CUSTOM_LOGO) /* voodoo++ */
+#include CONFIG_FB_S3C_CUSTOM_LOGO_HEADER
+#else
 #if defined(CONFIG_ARIES_EUR)
 #include "logo_rgb24_wvga_portrait.h"
 #elif defined(CONFIG_ARIES_LATONA)
@@ -142,6 +145,7 @@ extern int get_boot_charger_info(void);
 #elif defined(CONFIG_ARIES_NTT)
 #include "logo_rgb24_wvga_portrait_docomo.h"
 #endif
+#endif /* CONFIG_FB_S3C_USE_CUSTOM_LOGO */
 
 static int s3cfb_draw_logo(struct fb_info *fb)
 {
